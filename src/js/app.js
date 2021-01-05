@@ -32,7 +32,7 @@ $(document).ready(function(){
 
 
 const log_me_in = async () => {
-    const url = "http://40.88.248.138:80/users-api/v1/user"; // site that doesn’t send Access-Control-*
+    const url = "http://52.149.198.157:80/users-api/v1/user"; // site that doesn’t send Access-Control-*
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
     
@@ -61,7 +61,7 @@ const log_me_in = async () => {
 
 const register = async () => {
 
-    const url = "http://40.88.248.138:80/users-api/v1/register"; 
+    const url = "http://52.149.198.157:80/users-api/v1/register"; 
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
     

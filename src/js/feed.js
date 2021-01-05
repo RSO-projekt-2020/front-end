@@ -1,5 +1,5 @@
 const get_me_feed = async () => {
-    const url = "http://40.88.248.138:80/feed-api/v1/feed"; // site that doesn’t send Access-Control-*
+    const url = "http://52.149.198.157:80/feed-api/v1/feed"; // site that doesn’t send Access-Control-*
     
     var xhr = new XMLHttpRequest();
 
