@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Feed | Instaclone</title>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <link href="css/style.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    </head> 
+    <body>
+        <nav class="navigation">
+            <a href="feed.html">
+                <img 
+                    src="images/navLogo.png"
+                    alt="logo"
+                    title="logo"
+                    class="navigation__logo"
+                />
+            </a>
+        </nav>
+        <main class="feed" id="feed">
+            <section class="photo" id="photo">
+                <header class="photo__header">
+                    <div class="photo__header-column">
+                    </div>
+                    <div class="photo__header-column">
+                        <span class="photo__username">serranoarevalo</span>
+                        <span class="photo__location">European Art of Living Center - Bad Antogast</span>
+                    </div>
+                </header>
+                <div class="photo__file-container">
+                    <img
+                        class="photo__file"
+                        id="photo_id"
+                        src="images/feedPhoto.jpg"
+                    />
+                </div>
+                <div class="photo__info">
+                    <div class="photo__icons">
+                        <span class="photo__icon">
+                            <i class="fa fa-heart-o heart fa-lg"></i>
+                        </span>
+                        <span class="photo__icon">
+                            <i class="fa fa-comment-o fa-lg"></i>
+                        </span>
+                    </div>
+
+                    <span class="photo__time-ago">11 hours ago</span>
+                    
+                </div>
+            </section>
+        </main>
+        <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+        <script src="js/app.js"></script>
+        <script src="js/feed.js"></script>
+    </body>
+</html>

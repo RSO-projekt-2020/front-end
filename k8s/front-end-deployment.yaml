@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: front-end-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hipstergram-front-end
+  template:
+    metadata:
+      labels:
+        app: hipstergram-front-end
+    spec:
+      containers:
+        - image: klemenstanic/front-end:latest
+          name: front-end 
+          ports:
+            - containerPort: 8080
+              name: server
+              protocol: TCP
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: front-end
+spec:
+  type: ClusterIP
+  ports:
+    - port: 8080
+      protocol: TCP
+      targetPort: server
+  selector:
+    app: hipstergram-front-end
