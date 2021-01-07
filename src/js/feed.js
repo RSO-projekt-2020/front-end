@@ -95,6 +95,13 @@ function submit_comment(event){
 }
 
 
+function search(ele) {
+    if(event.key === 'Enter') {
+        localStorage.setItem("search_term", ele.value);
+        window.location.href = "search.html";
+    }
+}
+
 function logout(){
     document.cookie = "";
 }
