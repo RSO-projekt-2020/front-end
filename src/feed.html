@@ -19,7 +19,13 @@
                     class="navigation__logo"
                 />
             </a>
+            <div class="navigation__icons">
+                <a href="index.html" onclick="logout()" class="navigation__link">
+                    <i class="fa fa-user-o logout"> Logout</i>
+                </a>
+            </div>
         </nav>
+
         <main class="feed" id="feed">
             <section class="photo" id="photo">
                 <header class="photo__header">
@@ -47,8 +53,17 @@
                         </span>
                     </div>
 
+ 
+                    <ul class="photo__comments">
+                        <li class="photo__comment photo__comment_to_hide">
+                            <span class="photo__comment-author">serranoarevalo</span>wow this is great!
+                        </li>
+                        <li class="photo__comment">
+                            <input class="photo_comment_to_submit" id="comment_input" type="text">
+                            <button onclick="submit_comment(event)"> Submit </button>
+                        </li>
+                    </ul>
                     <span class="photo__time-ago">11 hours ago</span>
-                    
                 </div>
             </section>
         </main>

@@ -27,7 +27,7 @@ kind: Service
 metadata:
   name: front-end
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   ports:
     - port: 80
       protocol: TCP
