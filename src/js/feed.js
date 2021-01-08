@@ -71,7 +71,7 @@ function submit_comment(event){
         return
     }
 
-    const url = "http://52.149.198.157:80/videos-api/v1/videos/" + video_id + "/comments";
+    const url = "http://52.149.198.157:80/comments-api/v1/videos/" + video_id + "/comments";
 
     var xhr = new XMLHttpRequest();
 
