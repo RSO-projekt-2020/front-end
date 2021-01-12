@@ -25,9 +25,17 @@ itm.style.display = "none";
 
 get_me_feed();
 
+const capitalize = (s) => {
+  if (typeof s !== 'string') return ''
+  return s.charAt(0).toUpperCase() + s.slice(1)
+}
+
+function transform_labels(label1, label2, label3){
+    return "#"+capitalize(label1) + " " + "#" + capitalize(label2) + " " + "#" + capitalize(label3);
+}
+
 
 function populate_feed(feed){
-    console.log(feed);
     var itm = document.getElementById("photo");
     itm.style.display = "none";
 
@@ -37,8 +45,11 @@ function populate_feed(feed){
         var cln = itm.cloneNode(true);
         cln.style.display = "inline";
         cln.getElementsByClassName("photo__file")[0].src = el.path;
+        console.log(cln.getElementsByClassName("labels"));
+        cln.getElementsByClassName("labels")[0].innerHTML = transform_labels(el.label_1, el.label_2, el.label_3);
 
         var photo_comments = cln.getElementsByClassName("photo__comments")[0];
+
         
         var comment = cln.getElementsByClassName("photo__comment_to_hide")[0];
         comment.style.display = "none";
@@ -65,13 +76,12 @@ function populate_feed(feed){
 
 function submit_comment(event){
     video_id = event.srcElement.parentNode.parentNode.parentNode.parentNode.id;
-    console.log(event);
     var comment = event.srcElement.previousSibling.previousSibling.value;
     if (comment === ""){
         return
     }
 
-    const url = "http://52.149.198.157:80/comments-api/v1/videos/" + video_id + "/comments";
+    const url = "http://52.149.198.157:80/videos-api/v1/videos/" + video_id + "/comments";
 
     var xhr = new XMLHttpRequest();
 

@@ -1,6 +1,6 @@
 
 const get_me_search_results = async () => {
-    const url = "http://52.149.198.157:80/search-api/v1/search?q=" + localStorage.getItem("search_term"); 
+    const url = "http://52.149.198.157:80/users-api/v1/search?q=" + localStorage.getItem("search_term"); 
     
     var xhr = new XMLHttpRequest();
 
